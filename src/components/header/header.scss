@@ -1,0 +1,25 @@
+.header {
+  position: relative;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 50px 0 20px 0;
+}
+.header::after {
+  content: "";
+  width: 80px;
+  position: absolute;
+  left: 110px;
+  bottom: 10px;
+  border: 2px solid #c59d5f;
+  background-color: #c59d5f;
+}
+.button {
+  position: absolute;
+  top: 20px;
+  padding: 3px 0;
+  color: #c59d5f;
+  border-bottom: 1px solid #c59d5f;
+}

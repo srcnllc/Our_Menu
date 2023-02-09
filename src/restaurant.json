@@ -1,0 +1,74 @@
+[
+    {
+        "id":0,
+        "name":"Buttermilk Pancakes",
+        "price":15,
+        "img" : "https://s3.gifyu.com/images/buttermilk_pancakes.jpg",
+        "desc" : "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed",
+        "category" : "Breakfast"
+    },
+    {
+        "id":2,
+        "name":"Bacon Overflow",
+        "price":15,
+        "img" : "https://s3.gifyu.com/images/Bacon-Overflow.jpg",
+        "desc" : "carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird",
+        "category" : "Breakfast"
+    },
+    {
+        "id":3,
+        "name":"Country Delight",
+        "price":15,
+        "img" : "https://s9.gifyu.com/images/Country-Delight.jpg",
+        "desc" : "Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut,",
+        "category" : "Breakfast"
+    },
+    {
+        "id":4,
+        "name":"Diner Double",
+        "price":15,
+        "img" : "https://s3.gifyu.com/images/Diner-Double.jpg",
+        "desc" : "vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats",
+        "category" : "lunch"
+    },
+    {
+        "id":5,
+        "name":"American Classic",
+        "price":15,
+        "img" : "https://s9.gifyu.com/images/American-Classic.jpg",
+        "desc" : "on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut",
+        "category" : "lunch"
+    },
+    {
+        "id":6,
+        "name":"Egg Attack",
+        "price":15,
+        "img" : "https://s3.gifyu.com/images/Egg-Attack.jpg",
+        "desc" : "franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up",
+        "category" : "lunch"
+    },
+    {
+        "id":7,
+        "name":"Godzilla Milkshake",
+        "price":15,
+        "img" : "https://s9.gifyu.com/images/Godzilla-Milkshake.jpg",
+        "desc" : "ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral",
+        "category" : "shakes"
+    },
+    {
+        "id":8,
+        "name":"Quarantine Buddy",
+        "price":15,
+        "img" : "https://s3.gifyu.com/images/Quarantine-Buddy.jpg",
+        "desc" : "skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing",
+        "category" : "shakes"
+    },
+    {
+        "id":9,
+        "name":"Oreo Dream",
+        "price":15,
+        "img" : "https://s3.gifyu.com/images/Oreo-Dream.jpg",
+        "desc" : "Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday",
+        "category" : "shakes"
+    }
+]

@@ -1,0 +1,119 @@
+.context {
+  width: 100%;
+  flex: 1;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  line-height: 1.25;
+  gap: 32px;
+  font-size: 20px;
+  color: #c59d5f;
+  cursor: pointer;
+  text-transform: capitalize;
+  .navlink {
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    &:hover {
+      background-color: #c59d5f;
+      color: #fff;
+    }
+  }
+}
+.productBody {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 50px 0;
+  .card {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    .cartImage {
+      width: 225px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #c59d5f;
+      border-radius: 8px;
+    }
+    .cartImage > img {
+      width: 95%;
+      height: 95%;
+      object-fit: cover;
+    }
+    .cartDesc {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 0 20px;
+
+      .title {
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+        justify-content: space-between;
+        border-bottom: 1.5px dotted black;
+        .titleName {
+          font-weight: 700;
+          color: black;
+        }
+        .price {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-weight: bold;
+          color: #c59d5f;
+          letter-spacing: 2px;
+          .price_Icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            #upPrice {
+              &:hover {
+                color: red;
+              }
+            }
+            #downPrice {
+              &:hover {
+                color: red;
+              }
+            }
+          }
+        }
+      }
+      .des {
+        padding: 15px 0;
+        opacity: 0.7;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .nav {
+    font-size: 16px;
+    gap: 24px;
+    line-height: 1;
+    .navlink {
+      padding: 3px 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .productBody {
+    justify-content: center;
+  }
+}
