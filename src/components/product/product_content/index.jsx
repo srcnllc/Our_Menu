@@ -6,7 +6,6 @@ import { AiOutlineUp ,AiOutlineDown } from "react-icons/ai";
 
 function ProductContent({urlName,isLoggIn}) {
     const product=RestaurantJSON;
-    console.log (product)
 
     const [altlist, setAltlist] = useState([]);
     useEffect(() => {
@@ -32,7 +31,6 @@ function ProductContent({urlName,isLoggIn}) {
                             <AiOutlineDown id='downPrice'/>
                             </div>} 
                     </div>
-
                 </div>
                 <div className="des">{item.desc}</div>
             </div>
