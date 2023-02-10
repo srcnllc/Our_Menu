@@ -12,7 +12,7 @@ Demo_Link: https://srcnllc.github.io/Our_Menu/
 Site kodlarken;  
 
 -React.js  
--Props kullanımı 
+-Props kullanımı   
 -React Icons 
 
 kullanılmıştır.  
