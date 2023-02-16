@@ -92,15 +92,40 @@
         line-height: 1.5;
       }
     }
+    .delete {
+      display: flex;
+      width: 30px;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: #c59d5f;
+      border: 1px solid red;
+      .deleteButton {
+        font-size: 23px;
+        cursor: pointer;
+        &:hover {
+          font-size: 25px;
+          color: red;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 600px) {
+  .productBody {
+    flex-direction: column;
+  }
+  .delete {
+    flex-direction: column;
+  }
   .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c59d5f;
   }
   .nav {
     font-size: 16px;
