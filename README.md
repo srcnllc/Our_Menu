@@ -14,6 +14,7 @@ Site kodlarken;
 -React.js  
 -Props kullanımı   
 -React Icons 
+-react-responsive içerisinden useMediaQuery hook
 
 kullanılmıştır.  
   
