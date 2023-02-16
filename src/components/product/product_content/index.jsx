@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import RestaurantJSON from '../../../restaurant.json'
-import { AiOutlineUp ,AiOutlineDown } from "react-icons/ai";
-
+import { AiOutlineUp ,AiOutlineDown ,AiOutlineArrowLeft,AiOutlineArrowUp} from "react-icons/ai";
+import { RiDeleteBin2Fill } from "react-icons/ri";
 
 
 function ProductContent({urlName,isLoggIn}) {
     const [product,setProduct]=useState(RestaurantJSON);
     const [altlist, setAltlist] = useState([]);
-
+    const isDesktopOrMobile = useMediaQuery({
+        query: '(max-width: 600px)'
+      })
       
     useEffect(() => {
         (urlName !== "All") ?
@@ -18,9 +21,13 @@ function ProductContent({urlName,isLoggIn}) {
         (product.find((index)=>index.id === item.id)? setProduct([...product],item.price+=1):setProduct([...product]))
      }
      function decrease (item){
-        (product.find((index)=>index.id === item.id)? setProduct([...product],item.price-=1):setProduct([...product]))
+        (product.find((index)=>index.id === item.id)? setProduct([...product],(item.price > 0 ? item.price -=1 : 0)):setProduct([...product]))
+     } 
+     function removeProduct (item){
+        setProduct(product.filter((index)=>index.id !== item.id))
      }
-  return (
+
+     return (
     <div className='productBody'>
         {altlist.map((item)=>(
         <div className='card' key={item.id}>
@@ -40,6 +47,13 @@ function ProductContent({urlName,isLoggIn}) {
                 </div>
                 <div className="des">{item.desc}</div>
             </div>
+            {isLoggIn && 
+                <div className="delete">
+            {isDesktopOrMobile ?<AiOutlineArrowUp/>:<AiOutlineArrowLeft/>} 
+                <RiDeleteBin2Fill className='deleteButton' onClick={()=>removeProduct(item)}/> 
+            </div>
+            }
+        
         </div>
         ))}
     </div>
