@@ -5,15 +5,21 @@ import { AiOutlineUp ,AiOutlineDown } from "react-icons/ai";
 
 
 function ProductContent({urlName,isLoggIn}) {
-    const product=RestaurantJSON;
-
+    const [product,setProduct]=useState(RestaurantJSON);
     const [altlist, setAltlist] = useState([]);
+
+      
     useEffect(() => {
         (urlName !== "All") ?
        ( setAltlist(product.filter(item => item.category.toLowerCase() === `${urlName.toLowerCase()}`)))
         :setAltlist(product)
     },[urlName,product])
-
+    function increase(item){
+        (product.find((index)=>index.id === item.id)? setProduct([...product],item.price+=1):setProduct([...product]))
+     }
+     function decrease (item){
+        (product.find((index)=>index.id === item.id)? setProduct([...product],item.price-=1):setProduct([...product]))
+     }
   return (
     <div className='productBody'>
         {altlist.map((item)=>(
@@ -27,8 +33,8 @@ function ProductContent({urlName,isLoggIn}) {
                     <div className="price">
                         <span >{item.price}€</span>
                         {isLoggIn && <div className='price_Icon'>
-                            <AiOutlineUp id='upPrice'/>
-                            <AiOutlineDown id='downPrice'/>
+                            <AiOutlineUp id='upPrice' onClick={()=>increase(item)}/>
+                            <AiOutlineDown id='downPrice' onClick={()=>decrease(item)}/>
                             </div>} 
                     </div>
                 </div>
@@ -37,7 +43,6 @@ function ProductContent({urlName,isLoggIn}) {
         </div>
         ))}
     </div>
-
   )
-        }
+}
 export default ProductContent
