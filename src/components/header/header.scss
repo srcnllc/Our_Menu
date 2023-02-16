@@ -23,3 +23,8 @@
   color: #c59d5f;
   border-bottom: 1px solid #c59d5f;
 }
+@media screen and (max-width: 600px) {
+  .header {
+    width: 100%;
+  }
+}
